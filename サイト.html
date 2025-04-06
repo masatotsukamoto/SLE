@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[治験名] 参加者募集のご案内 - [治験依頼者名]</title>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-X6SS');</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+      @font-face {
+        font-family: 'LucideIcons';
+        src: url(https://cdn.jsdelivr.net/npm/lucide-static@latest/font/Lucide.ttf) format('truetype');
+      }
+      .lucide {
+        font-family: 'LucideIcons';
+        font-size: 1.1em;
+        line-height: 1;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 0.5em;
+        color: inherit;
+      }
+      ul .lucide {
+         color: #0369a1; /* sky-700 */
+         font-size: 1em;
+         margin-right: 0.4em;
+      }
+      body {
+        background: linear-gradient(to bottom, #a5f3fc, #bae6fd); /* cyan-200 to sky-200 */
+        background-attachment: fixed;
+        position: relative;
+        overflow-x: hidden;
+      }
+
+      /* Floating Orbs Animation */
+      @keyframes float {
+        0% { transform: translate(0px, 0px) scale(1); }
+        25% { transform: translate(30px, -40px) scale(1.05); }
+        50% { transform: translate(-35px, 30px) scale(0.95); }
+        75% { transform: translate(40px, 25px) scale(1.03); }
+        100% { transform: translate(0px, 0px) scale(1); }
+      }
+      @keyframes fadeInOrb {
+         from { opacity: 0; }
+         to { opacity: 1; }
+      }
+      #floating-orbs-container {
+         position: fixed; inset: 0; z-index: 0; overflow: hidden; pointer-events: none;
+      }
+      .orb {
+        position: absolute; border-radius: 50%; opacity: 0;
+        animation-name: float, fadeInOrb;
+        animation-timing-function: ease-in-out, ease-out;
+        animation-iteration-count: infinite, 1;
+        animation-direction: alternate, normal;
+        animation-fill-mode: forwards;
+      }
+      .orb-1 { width: 120px; height: 120px; background: rgba(244, 114, 182, 0.08); top: 15%; left: 10%; animation-duration: 9s, 1s; animation-delay: 0s, 0.5s; }
+      .orb-2 { width: 60px; height: 60px; background: rgba(251, 191, 36, 0.1); top: 70%; left: 85%; animation-duration: 7s, 1s; animation-delay: 1s, 1s; }
+      .orb-3 { width: 150px; height: 150px; background: rgba(186, 230, 253, 0.12); top: 80%; left: 30%; animation-duration: 11s, 1s; animation-delay: 2s, 1.5s; }
+      .orb-4 { width: 90px; height: 90px; background: rgba(244, 114, 182, 0.1); top: 40%; left: 60%; animation-duration: 8s, 1s; animation-delay: 0.5s, 0.8s; }
+      .orb-5 { width: 70px; height: 70px; background: rgba(165, 243, 252, 0.15); top: 5%; left: 70%; animation-duration: 9s, 1s; animation-delay: 1.5s, 1.2s; }
+      .orb-6 { width: 110px; height: 110px; background: rgba(253, 224, 71, 0.09); top: 55%; left: 5%; animation-duration: 10s, 1s; animation-delay: 2.5s, 1.8s; }
+      .orb-7 { width: 40px; height: 40px; background: rgba(251, 207, 232, 0.15); top: 30%; left: 40%; animation-duration: 12s, 1s; animation-delay: 3s, 2s; }
+      .orb-8 { width: 100px; height: 100px; background: rgba(251, 191, 36, 0.08); top: 90%; left: 65%; animation-duration: 15s, 1s; animation-delay: 4s, 2.2s; }
+      .orb-9 { width: 75px; height: 75px; background: rgba(165, 243, 252, 0.12); top: 25%; left: 90%; animation-duration: 11s, 1s; animation-delay: 3.5s, 1.6s; }
+      .orb-10 { width: 130px; height: 130px; background: rgba(244, 114, 182, 0.08); top: 5%; left: 35%; animation-duration: 20s, 1s; animation-delay: 4.5s, 2.5s; }
+
+
+      /* Enhanced Fade-in animation for Hero */
+      @keyframes fadeInEnhanced {
+        from { opacity: 0; transform: translateY(70px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .hero-animate-entrance {
+        opacity: 0;
+        animation: fadeInEnhanced 2.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+      }
+
+      /* Animated Underline for Headings */
+      .animated-underline::after {
+        content: ''; position: absolute; width: 0; height: 2px; bottom: -6px; left: 50%;
+        transform: translateX(-50%); background-color: #f472b6; /* pink-400 */
+        transition: width 0.4s ease-out;
+      }
+      .animated-underline:hover::after { width: 100%; }
+
+       /* Custom scrollbar */
+       ::-webkit-scrollbar { width: 8px; height: 8px; }
+       ::-webkit-scrollbar-track { background: #e0f2fe; border-radius: 10px; }
+       ::-webkit-scrollbar-thumb { background: #bae6fd; border-radius: 10px; }
+       ::-webkit-scrollbar-thumb:hover { background: #7dd3fc; }
+    </style>
+    <script>
+        // Tailwind Configuration - Pastel Theme
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'Inter', 'sans-serif'],
+                        poppins: ['Poppins', '"Noto Sans JP"', 'sans-serif'],
+                    },
+                    colors: {
+                        'heading_color': '#0369a1', // sky-700
+                        'heading_hover': '#0284c7', // sky-600
+                        'hero_bg': 'rgba(255, 255, 255, 0.8)', // white with 80% opacity
+                        'section_bg_subtle': '#f0f9ff', // sky-50
+                        'section_bg_note': '#f8fafc', // slate-50
+                        'text_color': '#374151', // gray-700
+                        'hero_text_color': '#334155', // slate-700
+                        'base-white': '#ffffff',
+                        'border-color': '#e0f2fe', // sky-100
+                        'footer_bg': '#bae6fd', // sky-200
+                        'footer_text': '#075985', // sky-800
+                        'accent-primary': '#f472b6', // pink-400
+                        'accent-primary-dark': '#ec4899', // pink-500
+                        'accent-secondary': '#fbbf24', // amber-400
+                        'accent-red': '#f87171',    // red-400
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans text-text_color antialiased tracking-wide">
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-X6SS"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <div id="floating-orbs-container">
+        <div class="orb orb-1"></div> <div class="orb orb-2"></div> <div class="orb orb-3"></div>
+        <div class="orb orb-4"></div> <div class="orb orb-5"></div> <div class="orb orb-6"></div>
+        <div class="orb orb-7"></div> <div class="orb orb-8"></div> <div class="orb orb-9"></div> <div class="orb orb-10"></div>
+    </div>
+
+    <main class="relative z-10">
+        <section class="min-h-screen flex items-center justify-center bg-hero_bg backdrop-blur-lg text-hero_text_color text-center rounded-b-lg shadow-lg relative overflow-hidden px-10">
+             <div class="container mx-auto relative z-10">
+                 <h1 class="text-3xl lg:text-4xl font-poppins font-bold mb-12 hero-animate-entrance" style="animation-delay: 0.6s;">
+                     <span class="animated-underline relative inline-block pb-1">全身性エリテマトーデスと共に「今」を生きる、あなたへ</span>
+                 </h1>
+                <h2 class="text-xl lg:text-2xl font-poppins font-semibold mb-12 hero-animate-entrance" style="animation-delay: 1.4s;">
+                    <span class="animated-underline relative inline-block pb-1">新しい治療の可能性を探る治験にご参加いただけませんか</span>
+                </h2>
+                <p class="text-lg font-medium hero-animate-entrance" style="animation-delay: 2.2s;">
+                    <span class="animated-underline relative inline-block pb-1">未来への希望と共に、今日をより良く生きるための一歩を。</span>
+                </p>
+                </div>
+        </section>
+
+        <section id="gaiyou" class="mb-20 md:mb-28 py-24 md:py-32">
+             <div class="container mx-auto px-8 max-w-6xl bg-gradient-to-b from-white via-white to-sky-50 rounded-lg shadow-lg p-12 md:p-20 md:flex items-center overflow-hidden border border-transparent hover:border-accent-primary transition-colors duration-300 ease-in-out">
+                 <div class="md:w-2/3 md:pr-16 animate-on-load" style="animation-delay: 1.0s;">
+                     <h3 class="text-2xl font-bold text-heading_color mb-8 flex items-center">
+                         <span class="lucide text-2xl">&#xe1b8;</span>
+                         <span class="animated-underline relative inline-block pb-1">はじめに：未来への希望をつなぐために</span>
+                     </h3>
+                     <p class="mb-5 leading-relaxed text-gray-700"> 全身性エリテマトーデス（SLE）と共に歩む皆様へ。SLEは、ご自身の免疫システムが誤って自分の体を攻撃してしまう自己免疫疾患の一つです。現在、様々な治療法がありますが、より効果的で副作用の少ない新しい治療法の開発が切望されています。
+                    </p>
+                    <p class="mb-5 leading-relaxed text-gray-700">
+                        この度、[治験依頼者名]では、SLEに対する新しい治療の可能性を探るため、[治験薬名]の臨床試験（治験）を実施いたします。この治験は、将来のSLE治療に新たな光をもたらす可能性を秘めています。
+                    </p>
+                     <p class="leading-relaxed font-medium text-heading_color text-lg mt-8"> 皆様のご参加が、ご自身だけでなく、未来の多くの患者さんたちの希望につながるかもしれません。私たちと一緒に、より良い治療法の実現を目指しませんか？
+                    </p>
+                </div>
+                 <div class="md:w-1/3 md:pl-16 mt-12 md:mt-0 animate-on-load" style="animation-delay: 1.2s;">
+                    <img src="aruku.jpg" alt="前向きに歩みだす女性の後ろ姿（白背景）" class="rounded-lg shadow-md w-full transition-transform duration-300 ease-in-out hover:scale-105">
+                </div>
+            </div>
+        </section>
+
+        <section id="joken" class="mb-20 md:mb-28 py-24 md:py-32">
+            <div class="container mx-auto px-8 max-w-6xl">
+                <h2 class="text-3xl font-bold text-heading_color mb-16 text-center"> <span class="animated-underline relative inline-block pb-2">ご参加いただける方の主な条件</span>
+                </h2>
+                 <div class="bg-base-white p-12 md:p-16 rounded-lg shadow-lg border border-transparent hover:border-accent-primary transition-colors duration-300 ease-in-out"> <ul class="space-y-6 text-text_color text-lg"> <li class="flex items-start"><span class="lucide text-accent-primary mt-1">&#xe0bc;</span> 全身性エリテマトーデス（SLE）と診断されている方</li>
+                        <li class="flex items-start"><span class="lucide text-accent-primary mt-1">&#xe08b;</span> 年齢が [下限年齢] 歳以上 [上限年齢] 歳以下の方</li>
+                        <li class="flex items-start"><span class="lucide text-accent-primary mt-1">&#xe51e;</span> [その他の具体的な参加条件１]</li>
+                        <li class="flex items-start"><span class="lucide text-accent-primary mt-1">&#xe51e;</span> [その他の具体的な参加条件２]</li>
+                        <li class="flex items-start"><span class="lucide text-accent-primary mt-1">&#xe530;</span> 治験への参加について、ご本人による同意が得られる方</li>
+                    </ul>
+                    <p class="mt-10 text-sm text-gray-600">※上記以外にも参加基準がございます。詳細はお問い合わせください。最終的な参加の可否は、医師の診察や検査結果に基づいて判断されます。</p>
+                </div>
+            </div>
+        </section>
+
+         <section id="gaiyou-detail" class="mb-20 md:mb-28 py-24 md:py-32 bg-white">
+             <div class="container mx-auto px-8 max-w-6xl">
+                 <h2 class="text-3xl font-bold text-heading_color mb-16 text-center">
+                    <span class="animated-underline relative inline-block pb-2">治験の概要：ご理解いただきたい大切なこと</span>
+                </h2>
+                  <div class="bg-base-white p-12 md:p-16 rounded-lg shadow-lg border border-transparent hover:border-accent-primary transition-colors duration-300 ease-in-out">
+                    <ul class="space-y-8 text-lg">
+                         <li class="flex items-start"><span class="lucide text-accent-primary mt-1">&#xe44b;</span><strong>目的:</strong> SLEに対する新しい治療薬[治験薬名]の有効性（どれくらい効くか）と安全性（副作用はどうか）を科学的に評価します。</li>
+                         <li class="flex items-start"><span class="lucide text-accent-primary mt-1">&#xe16b;</span><strong>治験薬:</strong> [治験薬名] または プラセボ（見た目は同じで有効成分を含まない偽薬）のいずれかが、[投与方法、例：点滴、飲み薬など]で用いられます。どちらを使用するかは公平に割り当てられます。</li>
+                         <li class="flex items-start"><span class="lucide text-accent-primary mt-1">&#xe0c7;</span><strong>期間:</strong> 全体の参加期間は 約 [治験期間] を予定しています。</li>
+                         <li class="flex items-start"><span class="lucide text-accent-primary mt-1">&#xe08b;</span><strong>来院頻度:</strong> 約 [来院頻度] に1回のペースで、指定の医療機関へお越しいただきます。</li>
+                         <li class="flex items-start"><span class="lucide text-accent-primary mt-1">&#xe1d0;</span><strong>実施医療機関:</strong> [実施医療機関名] （所在地: [所在地]）</li>
+                         <li class="flex items-start"><span class="lucide text-accent-primary mt-1">&#xe51e;</span><strong>主な検査・診察:</strong> 定期的な診察、血液・尿検査、[その他の特徴的な検査] などを行い、健康状態を詳細に確認します。</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="merit" class="mb-20 md:mb-28 py-24 md:py-32 bg-section_bg_subtle">
+            <div class="container mx-auto px-8 max-w-6xl">
+                 <h2 class="text-3xl font-bold text-heading_color mb-16 text-center">
+                    <span class="animated-underline relative inline-block pb-2">ご参加にあたって：期待されること・ご留意点</span>
+                </h2>
+                <div class="grid md:grid-cols-2 gap-12"> <div class="bg-base-white p-10 rounded-lg shadow-lg border border-transparent hover:border-accent-primary transition-colors duration-300 ease-in-out"> <h3 class="text-xl font-bold text-heading_color mb-5 flex items-center"><span class="lucide text-heading_color">&#xe03e;</span>期待されること（メリット）</h3>
+                        <ul class="list-disc list-inside space-y-4 text-gray-700 pl-2"> <li>最新の治療の選択肢にアクセスできる可能性があります。</li>
+                            <li>SLEに精通した専門医による丁寧な診察や検査を定期的に受けられます。</li>
+                            <li>ご自身の経験が、未来の医療の進歩に直接貢献します。</li>
+                            <li>治験参加に伴う交通費などの経済的負担が軽減される場合があります。</li>
+                            <li>ご自身の病状への理解が深まり、「今」の治療への向き合い方が変わるきっかけになるかもしれません。</li>
+                        </ul>
+                    </div>
+                     <div class="bg-base-white p-10 rounded-lg shadow-lg border border-transparent hover:border-accent-primary transition-colors duration-300 ease-in-out">
+                         <h3 class="text-xl font-bold text-heading_color mb-5 flex items-center"><span class="lucide text-heading_color">&#xe01d;</span>ご留意いただきたい点</h3>
+                         <ul class="list-disc list-inside space-y-4 text-gray-700 pl-2">
+                            <li>治験薬の効果が期待通りでない、または現れない可能性もあります。</li>
+                            <li>予期せぬ副作用が起こる可能性も考慮する必要があります。</li>
+                            <li>プラセボ（偽薬）を使用する群に割り当てられる場合があります。</li>
+                            <li>通常の診療に比べ、来院回数や検査項目が増えることがあります。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="nagare" class="mb-20 md:mb-28 py-24 md:py-32 bg-white">
+            <div class="container mx-auto px-8 max-w-4xl"> <h2 class="text-3xl font-bold text-heading_color mb-20 text-center"> <span class="animated-underline relative inline-block pb-2">ご参加までの流れ</span>
+                </h2>
+                 <div class="relative pl-12 border-l-2 border-accent-primary">
+                    <div class="mb-20 relative"> <div class="absolute -left-[1.8rem] top-1 w-10 h-10 bg-accent-primary rounded-full border-4 border-white ring-4 ring-accent-primary flex items-center justify-center text-white font-bold text-lg">1</div> <h3 class="text-xl font-bold text-heading_color mb-4 pl-6">お問い合わせ・資料請求</h3> <p class="text-gray-700 pl-6 leading-relaxed">まずはお電話またはフォームからお気軽にご連絡ください。担当者より治験に関する詳しい資料をお送りします。</p>
+                    </div>
+                    <div class="mb-20 relative">
+                         <div class="absolute -left-[1.8rem] top-1 w-10 h-10 bg-accent-primary rounded-full border-4 border-white ring-4 ring-accent-primary flex items-center justify-center text-white font-bold text-lg">2</div>
+                        <h3 class="text-xl font-bold text-heading_color mb-4 pl-6">説明・同意</h3>
+                        <p class="text-gray-700 pl-6 leading-relaxed">医師や治験コーディネーターが、治験の内容、目的、期間、予測される効果や副作用などについて詳しくご説明します。十分に理解・納得いただけましたら、参加への同意を文書でいただきます。</p>
+                    </div>
+                    <div class="mb-20 relative">
+                         <div class="absolute -left-[1.8rem] top-1 w-10 h-10 bg-accent-primary rounded-full border-4 border-white ring-4 ring-accent-primary flex items-center justify-center text-white font-bold text-lg">3</div>
+                        <h3 class="text-xl font-bold text-heading_color mb-4 pl-6">検査・登録</h3>
+                        <p class="text-gray-700 pl-6 leading-relaxed">治験参加の基準を満たしているかを確認するための検査を行います。基準を満たした場合、治験への登録となります。</p>
+                    </div>
+                    <div class="relative">
+                         <div class="absolute -left-[1.8rem] top-1 w-10 h-10 bg-accent-primary rounded-full border-4 border-white ring-4 ring-accent-primary flex items-center justify-center text-white font-bold text-lg">4</div>
+                        <h3 class="text-xl font-bold text-heading_color mb-4 pl-6">治験開始</h3>
+                        <p class="text-gray-700 pl-6 leading-relaxed">スケジュールに沿って、治験薬の投与や定期的な検査・診察が開始されます。</p>
+                    </div>
+                </div>
+                <p class="mt-16 text-center text-gray-600">※治験への参加はいつでも自由に取りやめることができます。</p>
+            </div>
+        </section>
+
+        <section id="faq" class="mb-20 md:mb-28 py-24 md:py-32 bg-section_bg_subtle"> <div class="container mx-auto px-8 max-w-6xl">
+                 <h2 class="text-3xl font-bold text-heading_color mb-16 text-center">
+                    <span class="animated-underline relative inline-block pb-2">よくあるご質問 (FAQ)</span>
+                </h2>
+                 <div class="space-y-6">
+                     <details class="bg-base-white p-10 rounded-lg shadow-lg border border-transparent hover:border-accent-primary transition-colors duration-300 ease-in-out group cursor-pointer"> <summary class="font-bold text-xl text-heading_color list-none flex justify-between items-center"> 治験に参加すると費用はかかりますか？
+                            <span class="lucide text-accent-primary transform transition-transform duration-200 group-open:rotate-180">&#xe0bf;</span> </summary>
+                        <p class="text-gray-700 mt-6 leading-relaxed pt-6 border-t border-border-color text-lg"> 治験に参加するための費用は基本的にかかりません。治験期間中の薬代や一部の検査費用は、治験依頼者（製薬会社など）が負担します。また、通院のための交通費などの負担を軽減するための費用（負担軽減費）が支払われる場合があります。詳細は説明文書をご確認ください。
+                        </p>
+                    </details>
+                     <details class="bg-base-white p-10 rounded-lg shadow-lg border border-transparent hover:border-accent-primary transition-colors duration-300 ease-in-out group cursor-pointer">
+                        <summary class="font-bold text-xl text-heading_color list-none flex justify-between items-center">
+                            副作用が心配です。
+                            <span class="lucide text-accent-primary transform transition-transform duration-200 group-open:rotate-180">&#xe0bf;</span>
+                        </summary>
+                        <p class="text-gray-700 mt-6 leading-relaxed pt-6 border-t border-border-color text-lg">
+                            新しい薬の候補を使用するため、予期せぬ副作用が起こる可能性は否定できません。治験中は、医師や専門スタッフが参加者の方の健康状態を注意深く観察し、万が一副作用が起こった場合には、迅速かつ適切な対応を行います。考えられる副作用については、事前に詳しくご説明します。
+                        </p>
+                    </details>
+                     <details class="bg-base-white p-10 rounded-lg shadow-lg border border-transparent hover:border-accent-primary transition-colors duration-300 ease-in-out group cursor-pointer">
+                        <summary class="font-bold text-xl text-heading_color list-none flex justify-between items-center">
+                            途中で参加をやめることはできますか？
+                            <span class="lucide text-accent-primary transform transition-transform duration-200 group-open:rotate-180">&#xe0bf;</span>
+                        </summary>
+                        <p class="text-gray-700 mt-6 leading-relaxed pt-6 border-t border-border-color text-lg">
+                            はい、治験への参加は完全に自由意思に基づきます。参加に同意された後でも、理由を問わず、いつでも参加を取りやめることができます。参加を取りやめた場合でも、不利益な扱いを受けることは一切ありません。
+                        </p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="mb-20 md:mb-28 py-24 md:py-32 bg-white">
+             <div class="container mx-auto px-8 max-w-5xl border border-transparent hover:border-accent-primary transition-colors duration-300 ease-in-out rounded-lg shadow-lg py-12 md:py-16">
+                 <h2 class="text-3xl font-bold text-heading_color mb-12 text-center">
+                    <span class="animated-underline relative inline-block pb-2">お問い合わせ・資料請求フォーム</span>
+                </h2>
+                <p class="text-center text-gray-700 mb-16 leading-relaxed">治験に関するご質問、詳しい資料のご請求はこちらからお送りください。<br>担当者より折り返しご連絡いたします。（※は必須項目）</p>
+                 <form action="#" method="POST" class="space-y-10 max-w-3xl mx-auto"> <div>
+                        <label for="name" class="block text-base font-bold text-heading_color mb-3">お名前 <span class="text-accent-red font-normal">*</span></label>
+                        <input type="text" id="name" name="name" required class="w-full px-6 py-4 border border-border-color rounded-lg focus:ring-accent-primary focus:border-accent-primary text-lg" placeholder="例：山田 太郎"> </div>
+                    <div>
+                        <label for="email" class="block text-base font-bold text-heading_color mb-3">メールアドレス <span class="text-accent-red font-normal">*</span></label>
+                        <input type="email" id="email" name="email" required class="w-full px-6 py-4 border border-border-color rounded-lg focus:ring-accent-primary focus:border-accent-primary text-lg" placeholder="例：example@email.com">
+                    </div>
+                    <div>
+                        <label for="phone" class="block text-base font-bold text-heading_color mb-3">電話番号</label>
+                        <input type="tel" id="phone" name="phone" class="w-full px-6 py-4 border border-border-color rounded-lg focus:ring-accent-primary focus:border-accent-primary text-lg" placeholder="例：090-1234-5678">
+                    </div>
+                     <div>
+                        <label for="subject" class="block text-base font-bold text-heading_color mb-3">件名 <span class="text-accent-red font-normal">*</span></label>
+                        <select id="subject" name="subject" required class="w-full px-6 py-4 border border-border-color rounded-lg focus:ring-accent-primary focus:border-accent-primary bg-white appearance-none text-lg">
+                            <option value="" disabled selected>選択してください</option>
+                            <option value="資料請求">資料請求</option>
+                            <option value="参加に関する質問">参加に関する質問</option>
+                            <option value="その他">その他のお問い合わせ</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-base font-bold text-heading_color mb-3">お問い合わせ内容 <span class="text-accent-red font-normal">*</span></label>
+                        <textarea id="message" name="message" rows="7" required class="w-full px-6 py-4 border border-border-color rounded-lg focus:ring-accent-primary focus:border-accent-primary text-lg" placeholder="具体的なご質問やご要望をご記入ください。"></textarea> </div>
+                     <div class="text-center pt-8"> <button type="submit" class="bg-accent-primary text-white px-16 py-5 rounded-full text-xl font-bold hover:bg-accent-primary-dark transition duration-300 shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent-primary"> <span class="lucide" style="font-size: 1em; margin-right: 0.5em;">&#xe1c5;</span> 送信する
+                        </button>
+                    </div>
+                     <p class="text-sm text-center text-gray-500 pt-4">※お問い合わせ内容によっては、回答にお時間をいただく場合がございます。</p>
+                </form>
+            </div>
+        </section>
+
+         <section class="py-24 md:py-32 bg-section_bg_note">
+             <div class="container mx-auto px-8 max-w-6xl border border-transparent hover:border-accent-primary transition-colors duration-300 ease-in-out rounded-lg shadow-lg bg-white p-12 md:p-16">
+                 <h3 class="text-xl font-bold text-heading_color mb-8 flex items-center"> <span class="animated-underline relative inline-block pb-1"> <span class="lucide text-xl">&#xe2d7;</span>参加される方の権利と安全は、何よりも大切です
+                    </span>
+                </h3>
+                <p class="text-base text-gray-600 leading-relaxed"> この治験は、参加される方の人権と安全を最優先に考え、国の法律（医薬品医療機器等法）や国際的なルール（「人を対象とする生命科学・医学系研究に関する倫理指針」等）を厳格に守って計画・実施されます。計画内容は、専門家や外部委員で構成される[倫理審査委員会名]によって、科学的・倫理的な観点から厳しく審査され、承認されています。
+                    治験への参加は、いつでもご自身の自由な意思で決めることができ、参加しないことや、一度同意した後でも途中で参加を取りやめることで、不利益な扱いを受けることは一切ありません。安心してご検討ください。
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-footer_bg text-footer_text py-20 mt-24"> <div class="container mx-auto px-8 text-center">
+            <div class="mb-10"> <a href="#" class="text-2xl font-bold text-heading_color">[運営組織ロゴ/名称]</a> </div>
+            <div class="mb-10 text-base opacity-90"> <p class="mb-4">[運営組織住所]</p>
+                <p>電話: <a href="tel:[連絡先電話番号]" class="hover:text-accent-primary">[連絡先電話番号]</a> / メール: <a href="mailto:[連絡先メールアドレス]" class="hover:text-accent-primary">[連絡先メールアドレス]</a></p>
+            </div>
+            <nav class="mb-10"> <ul class="flex flex-wrap justify-center gap-x-10 gap-y-4"> <li><a href="#gaiyou" class="hover:text-accent-primary text-base">治験概要</a></li> <li><a href="#joken" class="hover:text-accent-primary text-base">参加条件</a></li>
+                    <li><a href="#merit" class="hover:text-accent-primary text-base">参加メリット</a></li>
+                    <li><a href="#nagare" class="hover:text-accent-primary text-base">参加の流れ</a></li>
+                    <li><a href="#faq" class="hover:text-accent-primary text-base">FAQ</a></li>
+                    <li><a href="#contact" class="hover:text-accent-primary text-base">お問い合わせ</a></li>
+                    <li><a href="#" class="hover:text-accent-primary text-base">[プライバシーポリシーへのリンク]</a></li>
+                </ul>
+            </nav>
+            <p class="text-sm text-sky-700">&copy; [現在の西暦年] [運営組織名]. All rights reserved.</p> </div>
+    </footer>
+
+    </body>
+</html>
